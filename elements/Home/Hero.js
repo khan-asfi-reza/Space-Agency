@@ -23,7 +23,7 @@ export default function Hero() {
             </div>
             <div id={"land"} className={"absolute inset-0 grid place-items-center "}>
                 <div className={"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"}>
-                    <span className={"text-[11rem] font-extrabold opacity-20 text-gray-300"}>THE <br/> VOID</span>
+                    <span className={"text-[15rem] font-extrabold opacity-20 text-gray-500"}>THE <br/> VOID</span>
                 </div>
                 <div className={"md:block hidden absolute right-0 bottom-0 w-full md:h-auto  object-cover"}>
                     <Image src={Land} objectFit='cover' className={"object-cover h-full"} alt={""}/>
@@ -35,7 +35,7 @@ export default function Hero() {
                     <div className="xl:px-24 lg:px-20 md:px-16 md:w-full md:max-w-full container mx-auto">
                         <div className="grid md:grid-cols-2 gap-y-10">
                             <div>
-                                <h1 className={"xl:text-9xl lg:text-8xl md:text-7xl sm:text-6xl text-5xl font-medium text-white"}>
+                                <h1 className={"xl:text-9xl lg:text-8xl md:text-7xl sm:text-6xl text-5xl font-bold text-white"}>
                                     TRAVEL TO THE SPACE <br/>
                                 </h1>
                                 <div className={"mt-10"}>
