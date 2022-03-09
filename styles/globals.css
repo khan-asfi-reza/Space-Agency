@@ -7,11 +7,49 @@
 
 * {
     font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-    scroll-padding: 5rem;
+
 }
 
 body, html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.preserve-3d {
+    transform-style: preserve-3d;
+}
+
+.perspective {
+    perspective: 300px;
+}
+
+
+button, a {
+    cursor: pointer;
+}
+
+.parallax-object {
+    transform: translateZ(-300px) scale(2);
+}
+
+.parallax-object-front {
+    transform: translateZ(100px) scale(0.7);
+}
+
+.animate-float {
+    animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-5%);
+    }
+    100% {
+        transform: translatey(0px);
+    }
 }
