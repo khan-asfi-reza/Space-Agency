@@ -1,8 +1,8 @@
-import Nasa from "../assets/images/nasa.png";
-import Google from "../assets/images/google.png";
-import SpaceX from "../assets/images/spacex.png";
-import ESA from "../assets/images/esa.png";
-import CD from "../assets/images/codedrop.png";
+import Nasa from "../../assets/images/nasa.png";
+import Google from "../../assets/images/google.png";
+import SpaceX from "../../assets/images/spacex.png";
+import ESA from "../../assets/images/esa.png";
+import CD from "../../assets/images/codedrop.png";
 import {motion} from "framer-motion";
 
 const LogoContainer = ({image, delay}) => (
@@ -12,6 +12,7 @@ const LogoContainer = ({image, delay}) => (
         viewport={{once: true}}
         transition={{duration: 0.4, delay: delay * .2}}
         className={"relative h-32 lg:mx-16 mx-4 w-32 grid place-items-center overflow-hidden"}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={image.src} className={"object-fit-cover"} alt=""/>
     </motion.div>
 )

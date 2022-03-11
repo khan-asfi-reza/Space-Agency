@@ -5,7 +5,7 @@ import More from "../elements/Home/More";
 import Orbit from "../elements/Home/Sky";
 import Gallery from "../elements/Home/Gallery";
 import Footer from "../components/Footer";
-import OurClients from "../components/Clients";
+import OurClients from "../elements/Home/Clients";
 
 export default function Home() {
 
