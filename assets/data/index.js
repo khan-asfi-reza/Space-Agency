@@ -1,15 +1,15 @@
-export const HERO_ID = "hero";
-export const ABOUT_ID = "about";
-export const SECTOR_ID = "sector";
-export const GALLERY_ID = "gallery";
-export const CONTACT_ID = "contactus";
+export const HERO_ID = "home";
+export const PLANET_ID = "planet";
+export const ABOUT_ID = "sector";
+export const SUCCESS_ID = "story";
+export const BOOK_ID = "book";
 
-const getId = (id) => `#${id}`
+const getId = (id) => `/#${id}`
 
 export const NAVIGATION = [
     {name: 'Home', href: getId(HERO_ID), current: false},
+    {name: 'Planets', href: getId(PLANET_ID), current: false},
     {name: 'About', href: getId(ABOUT_ID), current: false},
-    {name: 'Sectors', href: getId(SECTOR_ID), current: false},
-    {name: 'Gallery', href: getId(GALLERY_ID), current: false},
-    {name: 'Contact', href: getId(CONTACT_ID), current: false}
+    {name: 'Story', href: getId(SUCCESS_ID), current: false},
+    {name: 'Book', href: "/" + BOOK_ID, current: false}
 ]
