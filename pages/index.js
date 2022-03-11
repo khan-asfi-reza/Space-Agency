@@ -2,7 +2,7 @@ import Navbar from "../components/Navigation";
 import About from "../elements/Home/About";
 import {NewHero} from "../elements/Home/NewHero";
 import More from "../elements/Home/More";
-import Orbit from "../elements/Home/Gallary";
+import Orbit from "../elements/Home/Gallery";
 
 export default function Home() {
 
