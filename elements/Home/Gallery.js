@@ -44,7 +44,12 @@ export default function Gallery() {
                     </div>
                     <div className={"container mx-auto mx-auto relative 2xl:px-32 lg:px-12 lg:py-32 px-10 py-10"}>
                         <div className={"flex flex-col lg:justify-center"}>
-                            <div className={"glass px-4 py-8 2xl:w-1/3 xl:w-1/2 lg:w-[40%] md:w-3/4 w-full"}>
+                            <motion.div
+                                initial={{opacity: 0, x: -100}}
+                                whileInView={{opacity: 1, x: 0}}
+                                viewport={{once: true}}
+                                transition={{duration: 0.4, delay: 0.3}}
+                                className={"glass px-4 py-8 2xl:w-1/3 xl:w-1/2 lg:w-[40%] md:w-3/4 w-full"}>
                                 <p className={"text-5xl text-white font-medium"}>
                                     200 +
                                 </p>
@@ -55,8 +60,13 @@ export default function Gallery() {
                                     No families and clients have ever complained about us, we are the best in the
                                     business
                                 </p>
-                            </div>
-                            <div className={"glass px-4 py-8  mt-20 2xl:w-1/3 xl:w-1/2 lg:w-[40%] md:w-3/4 w-full"}>
+                            </motion.div>
+                            <motion.div
+                                initial={{opacity: 0, x: -100}}
+                                whileInView={{opacity: 1, x: 0}}
+                                viewport={{once: true}}
+                                transition={{duration: 0.4, delay: 0.6}}
+                                className={"glass px-4 py-8  mt-20 2xl:w-1/3 xl:w-1/2 lg:w-[40%] md:w-3/4 w-full"}>
                                 <p className={"text-5xl text-white font-medium"}>
                                     323.5k +
                                 </p>
@@ -65,7 +75,7 @@ export default function Gallery() {
                                     We have gained more than 323.5k USD by offering tour service to the galaxy, we are
                                     the first in this business
                                 </p>
-                            </div>
+                            </motion.div>
                         </div>
                         <motion.div
                             initial={{opacity: 0, x: -100}}
