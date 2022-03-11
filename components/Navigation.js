@@ -5,6 +5,7 @@ import {AnimatePresence, motion} from "framer-motion";
 import {HERO_ID, NAVIGATION as navigation} from "../assets/data";
 import {ToTopButton} from "./Button";
 import {FaRocket} from "react-icons/fa";
+import Link from "next/link";
 
 export const Logo = ({color = "text-gray-900"}) => (
     <div className={"text-center rounded-full text-2xl bg-black grid place-items-center text-white h-12 w-12"}>
@@ -56,18 +57,22 @@ export default function Navbar({scrollingElement, scrollFunction, ...props}) {
                                     <div className="hidden lg:block ">
                                         <div className="flex justify-center">
                                             <AnimatePresence>
-                                                {navigation.map((item, key) => (<motion.a
-                                                    initial={{opacity: 0, y: 10}}
-                                                    whileInView={{opacity: 1, y: 0}}
-                                                    transition={{delay: key * 0.2}}
-                                                    viewport={{once: true}}
-                                                    key={item.name}
-                                                    href={item.href}
-                                                    className={classNames("lg:text-gray-300  hover:border-white hover:text-white", ' border-2 border-transparent', 'px-5 py-2 rounded-md text-lg font-medium')}
-                                                    aria-current={item.current ? 'page' : undefined}
-                                                >
-                                                    {item.name}
-                                                </motion.a>))}
+                                                {navigation.map((item, key) => (
+                                                    <Link key={key} passHref={true} href={item.href}>
+                                                        <motion.a
+                                                            initial={{opacity: 0, y: 10}}
+                                                            whileInView={{opacity: 1, y: 0}}
+                                                            transition={{delay: key * 0.2}}
+                                                            viewport={{once: true}}
+                                                            key={item.name}
+                                                            href={item.href}
+                                                            className={classNames("lg:text-gray-300  hover:border-white hover:text-white", ' border-2 border-transparent', 'px-5 py-2 rounded-md text-lg font-medium')}
+                                                            aria-current={item.current ? 'page' : undefined}
+                                                        >
+                                                            {item.name}
+                                                        </motion.a>
+                                                    </Link>
+                                                ))}
                                             </AnimatePresence>
                                         </div>
                                     </div>
