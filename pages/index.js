@@ -1,15 +1,20 @@
 import Navbar from "../components/Navigation";
-import Hero from "../elements/Home/Hero";
 import About from "../elements/Home/About";
+import {NewHero} from "../elements/Home/NewHero";
+import More from "../elements/Home/More";
+import Orbit from "../elements/Home/Gallary";
 
 export default function Home() {
+
     return (
-        <div className={""}>
+        <main className={""}>
             <Navbar/>
-            <main className={"scroll-smooth perspective h-screen overflow-x-hidden overflow-y-auto bg-black"}>
-                <Hero/>
+            <main className={"bg-black"}>
+                <NewHero/>
                 <About/>
+                <More/>
+                <Orbit/>
             </main>
-        </div>
+        </main>
     )
 }
