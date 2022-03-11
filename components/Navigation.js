@@ -78,16 +78,18 @@ export default function Navbar({scrollingElement, scrollFunction, ...props}) {
                                     </div>
 
                                     <div className={"justify-self-end grid place-items-center"}>
-                                        <motion.a
-                                            initial={{opacity: 0, y: 10}}
-                                            whileInView={{opacity: 1, y: 0}}
-                                            transition={{delay: 6 * 0.2}}
-                                            viewport={{once: true}}
-                                            className={classNames("text-white  hover:border-white hover:text-white", ' border-2 border-white', 'px-5 py-2 rounded-md text-lg font-medium')}
-                                            aria-current={'page'}
-                                        >
-                                            Login
-                                        </motion.a>
+                                        <Link href={"/login"} passHref>
+                                            <motion.a
+                                                initial={{opacity: 0, y: 10}}
+                                                whileInView={{opacity: 1, y: 0}}
+                                                transition={{delay: 6 * 0.2}}
+                                                viewport={{once: true}}
+                                                className={classNames("text-white transition-all hover:bg-white hover:text-black", ' border-2 border-white', 'px-5 py-2 rounded-md text-lg font-medium')}
+                                                aria-current={'page'}
+                                            >
+                                                Login
+                                            </motion.a>
+                                        </Link>
                                     </div>
 
                                 </div>
