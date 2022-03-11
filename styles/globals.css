@@ -13,8 +13,16 @@
 body, html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    height: 100vh;
-    width: 100vw;
+
+}
+
+.glass {
+    background: rgba(32, 32, 32, 0.25);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    @apply shadow-black;
 }
 
 .preserve-3d {
@@ -31,11 +39,17 @@ button, a {
 }
 
 .parallax-object {
+    transform: translateZ(-150px) scale(1.5);
+}
+
+.parallax-object-2 {
     transform: translateZ(-300px) scale(2);
 }
 
-.parallax-object-front {
-    transform: translateZ(100px) scale(0.7);
+@media screen and (min-width: 992px) {
+    .parallax-object-front {
+        transform: translateZ(100px) scale(0.7);
+    }
 }
 
 .animate-float {
