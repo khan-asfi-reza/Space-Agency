@@ -6,17 +6,11 @@ import {Particle} from "../../components/Particles";
 import {FaArrowDown, FaArrowRight} from "react-icons/fa";
 
 import HeroImage2 from "../../assets/images/hero_image_2.jpg";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import classNames from "classnames";
 
 export default function Hero() {
     const [bottom, setBottom] = useState(false);
-
-    useEffect(() => {
-        window.onscroll = function () {
-            setBottom(window.current.scrollTop > 100);
-        }
-    }, [])
 
     return (
         <main className={"-z-10 flex-1 h-screen relative preserve-3d main"}>
@@ -90,7 +84,7 @@ export default function Hero() {
                 </div>
 
                 <div
-                    className={classNames("absolute h-10 duration-300 w-full bottom-0 bg-black transition-all", bottom ? "opacity-100" : "opacity-0")}>
+                    className={classNames("absolute h-10 duration-300 w-full bottom-0 bg-black transition-all",)}>
 
                 </div>
 
