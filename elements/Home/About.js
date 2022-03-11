@@ -1,27 +1,80 @@
 import Juptiter from "../../assets/images/jupiter.png"
+import Mars from "../../assets/images/BlueNew.png"
+import Earth from "../../assets/images/BluePlanet.png"
+import Sky from "../../assets/images/sky1.jpg"
 import Image from "next/image";
+import {FaStar} from "react-icons/fa";
+
+function range(i) {
+    return [...Array(i).keys()];
+}
+
+
+const PlanetCard = ({image, title, text, star, price}) => (
+    <div className={"h-[28rem] relative"}>
+        <div className="absolute inset-0 overflow-hidden">
+            <Image alt={title} src={image} layout={"fill"} objectFit={"contain"}/>
+        </div>
+        <div className={"lg:w-10/12 w-full mx-auto absolute left-1/2 transform top-1/2 -translate-x-1/2"}>
+            <div className={"glass lg:p-10 md:p-8 p-6 w-full"}>
+                <h3 className={"text-white font-medium lg:text-2xl text-xl"}>
+                    {title}
+                </h3>
+                <p className={"text-gray-300 lg:text-lg text-md mt-6"}>
+                    {text}
+                </p>
+                <div className="grid grid-cols-5 gap-x-2 mt-6">
+                    {range(star).map((i) => (
+                        <p key={i} className={"text-xl text-yellow-400"}>
+                            <FaStar/>
+                        </p>
+                    ))}
+                </div>
+                <p className={"mt-6 lg:text-3xl text-2xl font-medium text-white"}>
+                    {price} $
+                </p>
+            </div>
+        </div>
+    </div>
+)
 
 
 export default function About() {
     return (
-        <section className={"min-h-screen bg-black relative py-10 z-20 preserve-3d"}>
-            <div className={"lg:absolute pointer-events-none parallax-object-front lg:inset-0 transform rotate-180"}>
-                <div className={"lg:absolute lg:top-0 lg:left-0 lg:w-[45%] w-[90%] mx-auto"}>
-                    <Image priority={true} src={Juptiter} alt={""}/>
-                </div>
+        <section style={{backgroundImage: `url(${Sky.src})`}} className={"bg-cover relative min-h-screen z-20"}>
+            <div className={"absolute z-10 top-0 w-full h-32 bg-gradient-to-b from-black to-transparent"}>
+
             </div>
-            <div
-                className={"lg:absolute lg:mx-0 mx-auto flex max-w-7xl flex-col justify-center xl:top-0 -top-10 right-0 top-0 h-full z-30 lg:w-1/2 w-full lg:px-4 md:px-12 sm:px-10 px-4"}>
-                <h1 className={"xl:text-7xl sm:text-6xl text-5xl font-medium text-white"}>
-                    Get the best traveling experience
-                </h1>
-                <p className={"mt-10 text-xl text-gray-400"}>
-                    Hustle free, low cost, best interstellar site seeing, visit your favourite planet.
+            <section className={"z-20 container mx-auto px-4 py-16"}>
+                <h2 className={"text-6xl font-medium text-white text-center"}>
+                    Our Planetary Packages
+                </h2>
+                <p className={"text-lg text-gray-300 text-center mt-4"}>
+                    Get the best Planet Package within your price range
                 </p>
-                <button className={"mt-10 bg-transparent border-2 border-white text-white w-48 px-10 py-4"}>
-                    Learn More
-                </button>
-            </div>
+                <div className="grid lg:grid-cols-3 lg:gap-20 gap-4 xs:grid-cols-2 mt-32">
+                    <PlanetCard image={Juptiter}
+                                title={"Jupiter"}
+                                text={"The most expensive and luxurious tour ever"}
+                                star={5}
+                                price={"12,000"}
+                    />
+
+                    <PlanetCard image={Mars}
+                                title={"Vormir"}
+                                text={"The most satisfying and luxurious tour ever"}
+                                star={5}
+                                price={"12,000"}
+                    />
+
+                    <PlanetCard image={Earth}
+                                title={"Neptune"}
+                                text={"The most coolest and luxurious tour ever"}
+                                star={5}
+                                price={"12,000"}
+                    />
+                </div>
+            </section>
         </section>
     )
 }
