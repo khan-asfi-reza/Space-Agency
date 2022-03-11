@@ -16,6 +16,11 @@ body, html {
 
 }
 
+.bfcf2988-a322-4937-93c1-24723ebfc1b4 {
+    fill: #d6d6d6;
+}
+
+
 .glass {
     background: rgba(32, 32, 32, 0.25);
     backdrop-filter: blur(5px);
@@ -47,6 +52,10 @@ button, a {
 }
 
 @media screen and (min-width: 992px) {
+    .writing-mode-vertical {
+        writing-mode: vertical-lr;
+    }
+
     .parallax-object-front {
         transform: translateZ(100px) scale(0.7);
     }
