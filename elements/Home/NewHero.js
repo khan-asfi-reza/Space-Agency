@@ -1,10 +1,7 @@
 import {FaArrowRight, FaMoneyBill, FaRocket, FaStar} from "react-icons/fa";
-import {motion, useTransform, useViewportScroll} from "framer-motion";
+import {motion} from "framer-motion";
 
 export function NewHero() {
-
-    const {scrollYProgress} = useViewportScroll();
-    const yValue = useTransform(scrollYProgress, [0, 1], [0, 250])
 
     return (
         <section className={"relative min-h-screen w-full "}>
@@ -17,7 +14,6 @@ export function NewHero() {
             <motion.div initial={{opacity: 0}}
                         animate={{opacity: 1}}
                         transition={{duration: 1}}
-                        style={{y: yValue}}
                         className={"container transform relative mx-auto py-32 z-[50]"}>
                 <div className={"max-w-5xl mx-auto text-center "}>
                     <h1 className={"text-white text-center font-medium xl:text-8xl lg:text-7xl md:text-7xl sm:text-6xl text-6xl"}>
